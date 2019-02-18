@@ -1,0 +1,12 @@
+version: '2.3'
+
+services:
+  keras_cnn:
+    build: ./
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ./src:/notebooks
+    ports:
+      - 8888:8888
